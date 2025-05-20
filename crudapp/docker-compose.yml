@@ -1,9 +1,8 @@
-version: "3.8"
 services: 
   db:
     image: mysql:8.0
     environment:
-      MYSQL_PASSWORD: vaibhav
+      MYSQL_ROOT_PASSWORD: vaibhav
       MYSQL_DATABASE: crudapp
     ports:
       - "3306:3306"
@@ -15,7 +14,7 @@ services:
     build:
       context: .
     ports:
-      - "5000:5000"
+      - "21221:21221"
     environment:
       MYSQL_HOST: localhost
       MYSQL_USER: root
