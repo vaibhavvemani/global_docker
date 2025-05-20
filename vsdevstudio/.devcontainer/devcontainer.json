@@ -1,0 +1,21 @@
+{
+    "name": "vsdevstudio",
+    "dockerFile": "Dockerfile",
+    "context": ".",
+    "forwardPorts": [
+        8080
+    ],
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+            }
+        }
+    },
+    "postCreateCommand": "chsh -s $(which zsh)"
+
+}
