@@ -1,0 +1,8 @@
+### Building and pushing docker image to hub ###
+docker login
+docker build -t <image name> .
+docker push <image name> 
+
+docker run --name <container name> -p 8000:5000 <image name>
+
+docker exec -it <container name> bash
