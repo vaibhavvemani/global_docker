@@ -8,10 +8,16 @@
 <body>
 
     <h1>Housing Price Prediction</h1>
-    <input placeholder="house size">
-    <button>Submit</button>
 
-    <p>Price of the house: </p>
-    
+    <form action="/predict" method="POST">
+        <label for="area">Area</label>
+        <input type="text" id="area" name="area" placeholder="Enter area in square feet" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted house price {{ prediction }}</h2>
+    {% endif %}
 </body>
 </html>
